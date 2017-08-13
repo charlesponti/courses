@@ -1,6 +1,9 @@
 /**
- * {eager approach}
- * TODO Define `eagar approach`
+ * {eager approach}: Do work even if you may not have to
+ * 
+ * Defect:
+ * * Union too expensive (N array accesses)
+ * * Trees are flat, but too expensive to keep them flat
  */
 class QuickFind {
   /**
