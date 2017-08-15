@@ -26,35 +26,35 @@ let count = 0
 function binarySearch (n, list) {
   let min = 0
   let max = list.length - 1
+  let guess
 
   /**
-   * Let us say that the correct answer is 67
-   * On our first pass, 
+   * Do not execute if max is less than min. Otherwise, this `while` loop will
+   * execute endlessly
    */
-  while (true) {
+  while (max >= min) {
     count++
     // Get half of the current max
-    const currentIndex = Math.floor((min + max) / 2)
-    const currentValue = list[currentIndex]
+    guess = Math.floor((min + max) / 2)
 
-    if (currentValue === n) {
-      return
-    }
+    if (list[guess] === n) return
 
-    if (currentValue < n) {
+    if (list[guess] < n) {
       /**
        * Because the current is less than our correct answer, we
        * should now start with the number directly after the current number
        */
-      min = currentIndex + 1
-    } else if (currentValue > n) {
+      min = guess + 1
+    } else if (list[guess] > n) {
       /**
        * Because the current is more than our correct answer, we 
        * should now end with the number directly before the current number
        */
-      max = currentIndex - 1
+      max = guess - 1
     }
   }
+
+  return -1
 }
 
 binarySearch(correctAnswer, arr)
