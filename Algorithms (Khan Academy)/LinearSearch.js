@@ -14,6 +14,11 @@ const correctAnswer = Math.floor(Math.random() * (100 - 1) + 1)
  */
 let count = 0
 
+/**
+ * Find `n` in `list`
+ * @param {Number} n
+ * @param {Array} list
+ */
 function linearSearch (n, list) {
   for (var i = 0; i < list.length; i++) {
     count++
