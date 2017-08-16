@@ -41,14 +41,14 @@ function binarySearch (n, list) {
 
     if (list[guess] < n) {
       /**
-       * Because the current is less than our correct answer, we
-       * should now start with the number directly after the current number
+       * Because the current is less than our correct answer, we should
+       * now start with the number directly after the current number
        */
       min = guess + 1
     } else if (list[guess] > n) {
       /**
-       * Because the current is more than our correct answer, we 
-       * should now end with the number directly before the current number
+       * Because the current is more than our correct answer, we should
+       * now end with the number directly before the current number
        */
       max = guess - 1
     }
