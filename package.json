@@ -26,9 +26,15 @@
     "minimist": "^1.2.0"
   },
   "eslintConfig": {
+    "rules": {
+      "no-console": 0
+    },
     "extends": [
       "eslint:recommended",
       "standard"
     ]
+  },
+  "dependencies": {
+    "chai": "^4.1.1"
   }
 }
