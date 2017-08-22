@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlesponti/course-algorithms-part-1.git"
+    "url": "git+https://github.com/charlesponti/courses.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/charlesponti/course-algorithms-part-1/issues"
+    "url": "https://github.com/charlesponti/courses/issues"
   },
-  "homepage": "https://github.com/charlesponti/course-algorithms-part-1#readme",
+  "homepage": "https://github.com/charlesponti/courses#readme",
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
     "eslint": "^4.4.1",
