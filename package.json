@@ -4,7 +4,8 @@
   "description": "Collection of notes and exercises from courses I've taken",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:specs": "jasmine './courses/**/*.test.js'",
+    "test": "chokidar -p './courses/**/*.js' -c 'npm run test:specs'"
   },
   "repository": {
     "type": "git",
@@ -17,17 +18,22 @@
   },
   "homepage": "https://github.com/charlesponti/course-algorithms-part-1#readme",
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^4.2.3",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jasmine": "^2.7.0",
     "minimist": "^1.2.0"
   },
   "eslintConfig": {
     "rules": {
       "no-console": 0
+    },
+    "env": {
+      "jasmine": true
     },
     "extends": [
       "eslint:recommended",
