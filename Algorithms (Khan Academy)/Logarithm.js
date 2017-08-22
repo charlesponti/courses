@@ -30,7 +30,7 @@ function logarithm (n) {
 }
 
 if (argv.n) {
-  console.log(logarithm(argv.n)) // eslint-disable-line
+  console.log(logarithm(argv.n))
 }
 
 // TODO Create test file (lg(1580000)) should give 21-22

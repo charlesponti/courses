@@ -14,7 +14,7 @@
  * Union: takes constant time, given root
  * Proposition: Depth of any node `x` is at most `lg N` (lg - base-2 logarithm)
  */
-class WeightedQuickUnion {
+class QuickUnionWeighted {
   constructor (N) {
     this.tree = new Array(N)
     this.sz = new Array(N)
@@ -33,14 +33,14 @@ class WeightedQuickUnion {
     const pRoot = root(p)
     const qRoot = root(q)
 
-    if (pRoot === qRoot) return;
+    if (pRoot === qRoot) return
 
     if (sz[pRoot] < sz[qRoot]) {
-      this.tree[pRoot] = qRoot;
+      this.tree[pRoot] = qRoot
       this.sz[qRoot] += this.sz[pRoot]
     } else {
-      this.tree[qRoot] = pRoot;
-      this.sz[pRoot] += this.sz[qRoot];
+      this.tree[qRoot] = pRoot
+      this.sz[pRoot] += this.sz[qRoot]
     }
   }
 
@@ -58,7 +58,9 @@ class WeightedQuickUnion {
    * @param {Number} i 
    */
   root (i) {
-    while (i != this.tree[i]) i = this.tree[i]
+    while (i !== this.tree[i]) i = this.tree[i]
     return i
   }
 }
+
+module.exports = QuickUnionWeighted

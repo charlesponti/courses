@@ -29,4 +29,4 @@ function linearSearch (n, list) {
 // Perform search
 linearSearch(correctAnswer, arr)
 
-console.log('fn() executed ', count, ' times.') // eslint-disable-line
+console.log('fn() executed ', count, ' times.')

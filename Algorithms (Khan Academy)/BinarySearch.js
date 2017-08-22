@@ -58,4 +58,4 @@ function binarySearch (n, list) {
 }
 
 binarySearch(correctAnswer, arr)
-console.log('fn() executed ', count, ' times.') // eslint-disable-line
+console.log('fn() executed ', count, ' times.')

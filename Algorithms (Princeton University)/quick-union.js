@@ -45,3 +45,5 @@ class QuickUnion {
     return i
   }
 }
+
+module.exports = QuickUnion

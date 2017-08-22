@@ -33,14 +33,14 @@ class QuickUnionWithPathCompression {
     const pRoot = root(p)
     const qRoot = root(q)
 
-    if (pRoot === qRoot) return;
+    if (pRoot === qRoot) return
 
-    if (sz[pRoot] < sz[qRoot]) {
-      this.tree[pRoot] = qRoot;
+    if (this.sz[pRoot] < this.sz[qRoot]) {
+      this.tree[pRoot] = qRoot
       this.sz[qRoot] += this.sz[pRoot]
     } else {
-      this.tree[qRoot] = pRoot;
-      this.sz[pRoot] += this.sz[qRoot];
+      this.tree[qRoot] = pRoot
+      this.sz[pRoot] += this.sz[qRoot]
     }
   }
 
@@ -58,10 +58,12 @@ class QuickUnionWithPathCompression {
    * @param {Number} i 
    */
   root (i) {
-    while (i != this.tree[i]) {
+    let id
+
+    while (i !== this.tree[i]) {
       // Make every other node in path point to its grandparent (thereby halving path length)
       id[i] = id[id[i]]
-      
+
       // Set next index to the key set to the current index
       i = this.tree[i]
     }
@@ -69,3 +71,5 @@ class QuickUnionWithPathCompression {
     return i
   }
 }
+
+module.exports = QuickUnionWithPathCompression
